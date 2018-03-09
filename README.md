@@ -7,6 +7,7 @@
 npm install -g vue-cli
 vue init webpack-simple demo-project   ( Webpack + vue-loader )
 npm install vuex --save
+npm install vuetify --save
 ````
 ## Build Setup
 
