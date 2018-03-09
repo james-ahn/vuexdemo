@@ -23,7 +23,8 @@ export default {
   methods: {
     addCounter() {
       //this.$store.state.counter++;
-      this.$store.commit('addCounter',10); //mutations
+      //this.$store.commit('addCounter',10); //call mutations
+      this.$store.dispatch('addCounter',10); //call action
     }
   },
   components: {
