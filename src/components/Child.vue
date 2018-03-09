@@ -1,7 +1,7 @@
 <template>
   <div>
     <hr>
-    Child counter : {{ this.$store.state.counter }} <br>
+    Child counter : {{ childCounter }} <br>
     <button>+</button>
     <button>-</button>
   </div>
@@ -14,6 +14,11 @@
     data: () => ({
 
     }),
+    computed: {
+      childCounter() {
+       return this.$store.getters.getCounter;
+      }
+    },
     methods: {
       test() {}
       }

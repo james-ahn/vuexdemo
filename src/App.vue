@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    Parent counter : {{ this.$store.state.counter }} <br>
+    Parent counter : {{ parentCounter }} <br>
     <button @click="addCounter">+</button>
     <button @click="subCounter">-</button>
     <child></child>
@@ -16,6 +16,11 @@ export default {
   //     counter: 0
   //   }
   // },
+  computed: {
+    parentCounter() {
+     return this.$store.getters.getCounter;
+    }
+  },
   methods: {
     addCounter() {
       this.$store.state.counter++;
