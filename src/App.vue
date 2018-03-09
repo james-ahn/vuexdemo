@@ -2,7 +2,6 @@
   <div id="app">
     Parent counter : {{ parentCounter }} <br>
     <button @click="addCounter">+</button>
-    <button @click="subCounter">-</button>
     <child></child>
     <!--<child v-bind:passedCounter="counter"></child>-->
   </div>
@@ -18,15 +17,13 @@ export default {
   // },
   computed: {
     parentCounter() {
-     return this.$store.getters.getCounter;
+     return this.$store.getters.getCounter; //getters
     }
   },
   methods: {
     addCounter() {
-      this.$store.state.counter++;
-    },
-    subCounter() {
-      this.$store.state.counter--;
+      //this.$store.state.counter++;
+      this.$store.commit('addCounter',10); //mutations
     }
   },
   components: {

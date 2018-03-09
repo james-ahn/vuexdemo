@@ -2,8 +2,6 @@
   <div>
     <hr>
     Child counter : {{ childCounter }} <br>
-    <button>+</button>
-    <button>-</button>
   </div>
 </template>
 
