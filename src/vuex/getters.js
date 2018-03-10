@@ -1,4 +1,3 @@
-export const getCounter = state => {
-  console.log('state',state)
-  return state.counter
+export const getCurrentComic = state => {
+  return [state]; //make Json to Arrary
 }

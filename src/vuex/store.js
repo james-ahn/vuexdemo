@@ -7,7 +7,13 @@ import * as actions from './actions'
 Vue.use(Vuex);
 
 const state = {
-  counter: 0
+  title: '',
+  alt: '',
+  img: '',
+  year: '',
+  month: '',
+  day: '',
+  num: ''
 }
 
 const store = new Vuex.Store({

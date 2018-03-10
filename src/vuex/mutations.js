@@ -1,11 +1,16 @@
-const addCounter = (state,payload) => {
-  //state.counter = payload;
+const currentComicMutation = (state,payload) => {
   console.log('payload_mutation',payload);
-  return state.counter++;
+  state.title = payload.data.title;
+  state.alt= payload.data.alt;
+  state.img= payload.data.img;
+  state.year= payload.data.year;
+  state.month= payload.data.month;
+  state.day= payload.data.day;
+  state.num= payload.data.num;
 }
 
 export{
-  addCounter
+  currentComicMutation
 }
 
 

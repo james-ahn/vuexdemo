@@ -1,20 +1,34 @@
 import axios from 'axios';
 
-const currentComic = (context,payload) => {
-
-  console.log('payload_action',payload);
+const currentComicAction = (context,payload) => {
   let url ='http://xkcd.com/info.0.json ';
+  axiosApi(context,url);
+}
 
+const preComicAction = (context,payload) => {
+  let url ='http://xkcd.com/'+payload+'/info.0.json';
+  axiosApi(context,url);
+}
+
+
+const afterComicAction = (context,payload) => {
+  let url ='http://xkcd.com/'+payload+'/info.0.json';
+  axiosApi(context,url);
+}
+
+
+const axiosApi = (context,url) => {
   axios.get(url)
     .then(response  =>  {
-      console.log('response==>',response);
+    return context.commit('currentComicMutation',response); //commit for mutations
   }, e  =>  {
     console.log(e)
   })
-
-  //return context.commit('addCounter',10); //commit for mutations
 }
 
+
 export{
-  currentComic
+  currentComicAction,
+  preComicAction,
+  afterComicAction
 }

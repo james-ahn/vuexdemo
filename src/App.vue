@@ -10,9 +10,10 @@
       <v-btn color="warning" dark  @click="$router.push('/Itunes')">
         iTunes demo
       </v-btn>
-      <v-divider/>
-      <router-view></router-view>
     </div>
+    <v-divider/>
+    <router-view></router-view>
+
   </v-app>
 </template>
 
