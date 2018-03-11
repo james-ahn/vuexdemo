@@ -23,7 +23,7 @@ const axiosApi = (context,url) => {
       console.log('response=>',response);
     return context.commit('currentComicMutation',response); //commit for mutations
   }, e  =>  {
-    console.log(e)
+    throw e
   })
 }
 
