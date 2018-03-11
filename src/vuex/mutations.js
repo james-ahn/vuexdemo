@@ -1,5 +1,4 @@
 const currentComicMutation = (state,payload) => {
-  console.log('payload_mutation',payload);
   state.title = payload.data.title;
   state.alt= payload.data.alt;
   state.img= payload.data.img;

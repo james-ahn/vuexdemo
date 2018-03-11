@@ -20,6 +20,7 @@ const afterComicAction = (context,payload) => {
 const axiosApi = (context,url) => {
   axios.get(url)
     .then(response  =>  {
+      console.log('response=>',response);
     return context.commit('currentComicMutation',response); //commit for mutations
   }, e  =>  {
     console.log(e)
