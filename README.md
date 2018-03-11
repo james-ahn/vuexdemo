@@ -1,7 +1,7 @@
 # vuex demo project
 > it's the demo project
 
-## install for developing environment
+# install for developing environment
 ````
 npm install -g vue-cli
 vue init webpack-simple demo-project   ( Webpack + vue-loader )
@@ -9,7 +9,7 @@ npm install vuex --save
 npm install vue-router
 
 ````
-# Use Vuetify(Semantic UI Framework)
+## Use Vuetify(Semantic UI Framework)
 https://vuetifyjs.com/en/
 
 ```
@@ -17,7 +17,7 @@ npm install vuetify --save
 
 ```
 
-# Use Axios (Rest API)
+## Use Axios (Rest API)
 https://github.com/axios/axios
 
 ```
@@ -25,7 +25,7 @@ npm install axios --save
 
 ```
 
-## Build Setup
+# Build Setup
 ```
 # install dependencies
 npm install
@@ -42,4 +42,19 @@ please install chrome extension application :  Access-Control-Allow-Credentials
 
 ```
 
+# Unit Test (src/vuex/test.js)
+
+## install Unit Test
+```
+npm install mocha-loader --save-dev
+npm install mocha chai --save-dev
+```
+
+## Build setup Unit Test
+
+```
+- please change the entryPath in webpack.config.js
+- npm run dev
+
+```
 

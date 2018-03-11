@@ -1,8 +1,11 @@
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path')
+const webpack = require('webpack')
+
+//const entryPath = './src/main.js';
+const entryPath = './src/vuex/test.js'; //for unit test
 
 module.exports = {
-  entry: './src/main.js',
+  entry: entryPath,
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
@@ -29,6 +32,11 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
+      },
+      {
+        test: /test\.js$/,
+        use: 'mocha-loader',
+        exclude: /node_modules/,
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
