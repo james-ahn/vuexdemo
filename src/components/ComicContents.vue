@@ -15,11 +15,11 @@
 
     <v-divider class="mb-3"/>
 
-    <v-card>
-      <v-card-media :src="currentComic[0].img" height="1000px">
-      </v-card-media>
-    </v-card>
+    <v-carousel hide-controls hide-delimiters>
+      <v-carousel-item :src="currentComic[0].img"></v-carousel-item>
+    </v-carousel>
   </v-container>
+
 </template>
 
 <script>
