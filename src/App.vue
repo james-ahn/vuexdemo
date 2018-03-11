@@ -18,8 +18,6 @@
 </template>
 
 <script>
-export default {
-  methods: { }
-}
+export default {}
 </script>
 
