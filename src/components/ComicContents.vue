@@ -14,6 +14,12 @@
     </v-data-table>
 
     <v-divider class="mb-3"/>
+    <div>
+      <v-alert type="success" :value="true">
+        <div v-html="currentComic[0].alt"></div>
+      </v-alert>
+    </div>
+    <v-divider class="mb-3"/>
 
     <v-carousel hide-controls hide-delimiters>
       <v-carousel-item :src="currentComic[0].img"></v-carousel-item>
