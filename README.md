@@ -1,7 +1,12 @@
 # vuex demo project
-> it's the demo project
+> it's the demo project (Itunes, Comics)
 
-# install for developing environment
+# Github repository 
+```
+git clone https://github.com/james-ahn/vuexdemo.git
+```
+
+# Install for developing environment
 ````
 npm install -g vue-cli
 vue init webpack-simple demo-project   ( Webpack + vue-loader )

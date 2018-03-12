@@ -1,8 +1,8 @@
 const path = require('path')
 const webpack = require('webpack')
 
-//const entryPath = './src/main.js';
-const entryPath = './src/vuex/test.js'; //for unit test
+const entryPath = './src/main.js';
+//const entryPath = './src/vuex/test.js'; //for unit test
 
 module.exports = {
   entry: entryPath,

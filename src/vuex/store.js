@@ -13,7 +13,9 @@ const state = {
   year: '',
   month: '',
   day: '',
-  num: ''
+  num: '',
+  flag: false,
+  ituensData: {}
 }
 
 const store = new Vuex.Store({

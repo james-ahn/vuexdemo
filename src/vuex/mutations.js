@@ -1,3 +1,5 @@
+import Vue from 'vue'
+
 const currentComicMutation = (state,payload) => {
   state.title = payload.data.title;
   state.alt= payload.data.alt;
@@ -8,6 +10,20 @@ const currentComicMutation = (state,payload) => {
   state.num= payload.data.num;
 }
 
+const ituensMutation = (state,payload) => {
+  if(payload.data.results.length == 0){
+    for(let i in state.ituensData){
+      Vue.delete(state.ituensData, i, '')
+    }
+    state.flag = false; //confirm the existing data
+  }else{
+    for(let i in payload.data.results){
+      Vue.set(state.ituensData, i, payload.data.results[i]) //will trigger state updates in the reactivity system
+    }
+    state.flag = true;
+  }
+}
 export{
-  currentComicMutation
+  currentComicMutation,
+  ituensMutation
 }

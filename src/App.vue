@@ -4,11 +4,11 @@
       <v-btn color="info" dark  @click="$router.push('/')">
         main
       </v-btn>
-      <v-btn color="success" dark  @click="$router.push('/Comic')">
-        comic demo
-      </v-btn>
       <v-btn color="warning" dark  @click="$router.push('/Itunes')">
         iTunes demo
+      </v-btn>
+      <v-btn color="success" dark  @click="$router.push('/Comic')">
+        comic demo
       </v-btn>
     </div>
     <v-divider/>
